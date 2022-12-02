@@ -158,23 +158,24 @@ const Data = [
 function Home() {
 
   const [text,setText]=useState('')
-  const submitHandler=()=>{
-    alert("Do you want to submit your Resume")
-  }
+  // const submitHandler=()=>{
+  //   alert("Do you want to submit your Resume")
+  // }
   const searchHandler=(e)=>{
     e.preventDefault();
     alert("Job listed below..")
 
   }
   return (
+    <div className="container">
     <div className={classes.image1}>
       <Header />
       <div className={classes.img}>      
-        <button onClick={submitHandler}><img
+        {/* <button onClick={submitHandler}><img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSD3WhOe03-oVsW-F0d7pv-28zVD4CWTZhbQ&usqp=CAU"
           alt="comp"
         />
-        </button>
+        </button> */}
       </div>
       <form action="" class="search-bar" onSubmit={searchHandler}>
 	<input type="search" name="search" pattern=".*\S.*" placeholder="Search by Position..." onChange={(e)=>setText(e.target.value)}/>
@@ -209,6 +210,7 @@ function Home() {
           ))}
         </ul>
       </section>
+    </div>
     </div>
   );
 }
